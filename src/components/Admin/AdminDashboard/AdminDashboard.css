@@ -1,0 +1,91 @@
+/* Admin Dashboard Styles */
+
+/* Base layout for all screen sizes */
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px; /* Padding for better spacing */
+  }
+  
+  .stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack title and chart vertically */
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%; /* Ensure it doesn't overflow */
+    box-sizing: border-box; /* Prevent overflow from padding */
+  }
+  
+  .stat-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Space between title and chart */
+    color: #333;
+    width: 100%; /* Ensure title takes full width */
+    text-align: center; /* Center the title */
+  }
+  
+  .stat-card canvas {
+    width: 100% !important;
+    aspect-ratio: 1 / 1; /* Force square shape for all charts */
+    height: auto; /* Let the aspect-ratio control the height */
+    max-height: none; /* Remove max-height limit */
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Grid layout for PC with larger charts */
+  @media (min-width: 1024px) {
+    .admin-dashboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+      grid-column-gap: 20px;  /* Maintain horizontal gap */
+      grid-row-gap: 10px;     /* Reduced vertical gap */
+      padding: 20px;
+    }
+  
+    .stat-card {
+      width: 100%;
+      min-width: 400px; /* Minimum width for stat cards */
+      max-width: 600px; /* Max width for stat cards */
+      height: 350px; /* Fixed height */
+      padding: 20px;
+    }
+  
+    /* Removed conflicting height settings for canvas */
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .admin-dashboard {
+      padding: 10px; /* Reduce padding for mobile */
+    }
+  
+    .stat-card canvas {
+      width: 100% !important;
+      height: auto;
+      aspect-ratio: 1 / 1; /* Maintain square for pie charts */
+    }
+  
+    .stat-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 1024px) {
+    .stat-card {
+      width: 100%;
+      min-width: 350px;
+      height: 350px; /* Increase height for tablets and small screens */
+    }
+  }
+  

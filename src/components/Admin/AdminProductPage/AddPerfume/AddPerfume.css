@@ -1,0 +1,165 @@
+/* AddPerfume.css */
+
+.admin-product-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-product-page h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .product-form input[type="text"],
+  .product-form input[type="file"],
+  .product-form textarea,
+  .product-form select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .product-form input[type="text"]:focus,
+  .product-form textarea:focus {
+    border-color: #888;
+    outline: none;
+  }
+  
+  .product-form button {
+    padding: 0.8rem 1.2rem;
+    background-color: #2d72d9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .product-form button:hover {
+    background-color: #1c5bbf;
+  }
+  
+  .product-form select {
+    background-color: #f1f8ff; /* Light blue background */
+    color: #333; /* Dark text color */
+    transition: all 0.3s ease;
+  }
+  
+  .product-form select:focus {
+    border-color: #1c5bbf; /* Darker blue when focused */
+    background-color: #e0efff; /* Lighter background when focused */
+    outline: none;
+  }
+  
+  /* Styling for the product detail textarea */
+  .product-form textarea {
+    font-size: 1.3rem; /* Bigger text for the product detail */
+    height: 150px; /* Height for the multi-line input */
+    resize: vertical; /* Allow vertical resizing */
+    padding: 1rem;
+  }
+  
+  /* Styling for size checkboxes */
+  .size-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Styling for the 'Check All' checkbox */
+  .size-options label {
+    font-size: 1.1rem; /* Slightly larger font for the labels */
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Makes the label clickable */
+  }
+  
+  /* Custom styles for checkboxes */
+  .size-options input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #2d72d9;
+    background-color: #fff;
+    appearance: none; /* Removes default checkbox style */
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .size-options input[type="checkbox"]:checked {
+    background-color: #2d72d9;
+    border-color: #1c5bbf;
+  }
+  
+  .size-options input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  /* Hover effect for checkboxes */
+  .size-options input[type="checkbox"]:hover {
+    border-color: #1c5bbf;
+  }
+  
+  .size-options input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(45, 114, 217, 0.5);
+  }
+  
+  /* Additional styling for the Check All checkbox */
+  .size-options .check-all-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  /* Add styles for category select */
+.category-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .category-select-container select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .category-select-container select:focus {
+    border-color: #2d72d9;
+    background-color: #eaeaea;
+  }
+  
+  .category-select-container label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+  }
+  

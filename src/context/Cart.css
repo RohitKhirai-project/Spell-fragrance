@@ -1,0 +1,96 @@
+/* Entire cart container */
+.cart-container {
+    width: 350px;
+    max-width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  /* Header with title and close button */
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  /* Close button (X) */
+  .cart-close-btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+  }
+  
+  /* Scrollable content area */
+  .cart-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  
+  /* Each cart item */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Perfume image */
+  .cart-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  /* Text info */
+  .cart-details {
+    flex-grow: 1;
+  }
+  
+  .cart-details h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .cart-details p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Footer with checkout button */
+  .cart-footer {
+    border-top: 1px solid #eee;
+    padding: 1rem;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #444;
+  }
+  

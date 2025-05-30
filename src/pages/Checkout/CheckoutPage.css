@@ -1,0 +1,332 @@
+.payment-method > div {
+  /* From your snippet */
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+  /* From existing code - merged */
+  border: 1.5px solid #e5e7eb; /* existing border overrides #ccc */
+  padding: 1.25rem 1.5rem;      /* existing padding overrides 10px */
+  margin-bottom: 1rem;          /* existing margin overrides 8px */
+  border-radius: 8px;           /* existing border-radius overrides 4px */
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  user-select: none;
+}
+
+.payment-method > div:hover {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+.payment-method > div.selected {
+  /* From your snippet */
+  background-color: #d0f0fd;
+  border-color: #2a9df4;
+
+  /* From existing code - merged */
+  border-color: #2563eb;           /* existing overrides #2a9df4 */
+  background-color: #dbeafe;       /* existing overrides #d0f0fd */
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
+}
+
+.upi-options {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.upi-options li {
+  margin-bottom: 4px;
+}
+
+/* Reset and smooth scrolling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #333;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Left section styling */
+.checkout-left {
+  flex: 2;
+  min-width: 300px;
+}
+
+.checkout-left h2 {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Wrapper for smooth scroll target with padding */
+.form-scroll-wrapper {
+  padding-top: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.full-width {
+  grid-column: span 12;
+}
+
+.half-width {
+  grid-column: span 6;
+}
+
+.third-width {
+  grid-column: span 4;
+}
+
+input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+.note {
+  margin: 1rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Payment headings */
+.payment-method h3 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1e3a8a;
+}
+
+.payment-method ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.payment-method ul li {
+  margin-bottom: 0.3rem;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.submit-button {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.1rem;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #1e40af;
+  box-shadow: 0 6px 15px rgba(30, 64, 175, 0.5);
+}
+
+/* Right section styling */
+.checkout-right {
+  flex: 1;
+  min-width: 280px;
+  border: 1.5px solid #e5e7eb;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.order-summary h2 {
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  font-size: 1.3rem;
+}
+
+.order-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.discount-code {
+  margin-top: 1.25rem;
+}
+
+.discount-input {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.discount-input input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.discount-input input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+.discount-input button {
+  padding: 0.6rem 1.25rem;
+  background: #10b981;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.discount-input button:hover {
+  background: #047857;
+}
+
+.price-summary {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.price-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.price-summary .total {
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-top: 1.5px solid #d1d5db;
+  padding-top: 0.6rem;
+  color: #111827;
+}
+
+.tax-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .checkout-left,
+  .checkout-right {
+    min-width: 100%;
+  }
+}
+
+
+/* Override default ul/li styles inside upi-options since now it's divs */
+.upi-options {
+  margin-top: 8px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Style each UPI option div */
+.upi-options > div {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+/* Hover effect */
+.upi-options > div:hover {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+/* Selected UPI option */
+.upi-options > div.selected {
+  background-color: #dbeafe;
+  border-color: #2563eb;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
+}
+
+/* Icon styling inside UPI options */
+.upi-options img {
+  width: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Text styling inside UPI options */
+.upi-options > div {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e3a8a;
+}

@@ -1,0 +1,257 @@
+/* Prevent content from being hidden behind navbar */
+body {
+  padding-top: 80px; /* Desktop navbar height */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fefefe;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: relative;
+  height: 60px;
+}
+
+.navbar-logo {
+  text-align: center;
+  z-index: 1;
+}
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #ff69b4;
+  transition: width 0.3s ease;
+}
+
+.navbar-center a:hover::after {
+  width: 100%;
+}
+
+.navbar-center a:hover {
+  color: #ff69b4;
+}
+
+.navbar-left svg,
+.navbar-right svg {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar-left svg:hover,
+.navbar-right svg:hover {
+  color: #ff69b4;
+}
+
+/* Make sure .web-only a is clickable */
+.web-only a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.web-only a:hover {
+  color: #ff69b4;
+}
+
+/* Hide hamburger menu by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* ================= Mobile Styles ================= */
+@media (max-width: 768px) {
+  .navbar-social-icons {
+    display: none;
+  }
+
+  .web-only {
+    display: none;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .mobile-sidebar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  .mobile-sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .mobile-sidebar a:hover {
+    color: #ff69b4;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #eee;
+    z-index: 999;
+  }
+
+  .mobile-footer svg {
+    font-size: 22px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-footer svg:hover {
+    color: #ff69b4;
+  }
+
+  .mobile-footer .footer-shop {
+    display: none;
+  }
+
+  .footer-icon {
+    z-index: 1001;
+    position: relative;
+  }
+
+  body {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
+.side-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.panel-header {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.panel-content {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}

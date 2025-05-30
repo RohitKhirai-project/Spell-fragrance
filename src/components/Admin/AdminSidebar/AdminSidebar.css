@@ -1,0 +1,211 @@
+/* AdminSidebar.css */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .admin-sidebar {
+      width: 100vw;
+      height: calc(100vh - 60px);
+      position: fixed;
+      top: 60px;
+      left: -100vw;
+      background: linear-gradient(135deg, #ff6f61, #f8cdda); /* Colorful gradient background */
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      transition: left 0.3s ease-in-out, background-color 0.3s ease;
+    }
+  
+    .admin-sidebar.open {
+      left: 0;
+    }
+  
+    .sidebar-header {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Arial', sans-serif;
+    }
+  
+    .admin-sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .admin-sidebar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 12px 20px;
+      display: block;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
+    }
+  
+    .admin-sidebar nav ul li a:hover {
+      background-color: #e74c3c;
+      padding-left: 25px;
+      color: #fff;
+    }
+  
+    .sidebar-close-btn {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 26px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+      transition: transform 0.3s ease;
+    }
+  
+    .sidebar-close-btn:hover {
+      transform: rotate(90deg);
+    }
+  
+    .submenu-toggle {
+      cursor: pointer;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f39c12; /* Accent color for Products */
+      border-radius: 6px;
+      transition: background 0.2s ease, padding-left 0.2s ease;
+    }
+  
+    .submenu-toggle:hover {
+      background-color: #e67e22;
+    }
+  
+    .submenu {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .submenu li a {
+      font-size: 16px;
+      padding: 8px 20px;
+      display: block;
+      color: #ccc;
+      transition: color 0.2s ease;
+    }
+  
+    .submenu li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 769px) {
+    .admin-sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: linear-gradient(135deg, #ff6f61, #f8cdda); /* Colorful gradient background */
+      z-index: 998;
+      overflow-y: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      transition: left 0.3s ease-in-out, background-color 0.3s ease;
+    }
+  
+    .admin-sidebar.open {
+      left: 0;
+    }
+  
+    .sidebar-header {
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Arial', sans-serif;
+    }
+  
+    .admin-sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .admin-sidebar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 12px 20px;
+      display: block;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
+    }
+  
+    .admin-sidebar nav ul li a:hover {
+      background-color: #e74c3c;
+      padding-left: 25px;
+      color: #fff;
+    }
+  
+    .sidebar-close-btn {
+      display: none;
+    }
+  
+    .submenu-toggle {
+      cursor: pointer;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f39c12;
+      border-radius: 6px;
+      transition: background 0.2s ease, padding-left 0.2s ease;
+    }
+  
+    .submenu-toggle:hover {
+      background-color: #e67e22;
+    }
+  
+    .submenu {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .submenu li a {
+      font-size: 16px;
+      padding: 8px 20px;
+      display: block;
+      color: #ccc;
+      transition: color 0.2s ease;
+    }
+  
+    .submenu li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+  

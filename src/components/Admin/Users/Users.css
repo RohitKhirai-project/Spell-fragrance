@@ -1,0 +1,58 @@
+/* Users Page Styles */
+.users-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .users-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .user-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .user-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-list th,
+  .user-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-list th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .user-list tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .view-btn,
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #28a745;
+  }
+  
+  .view-btn:hover,
+  .edit-btn:hover {
+    opacity: 0.8;
+  }
+  

@@ -1,0 +1,133 @@
+.order-page {
+    padding: 40px 20px;
+    background-color: #f9fafb;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  /* Page title */
+  .order-page h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #111827;
+  }
+  
+  /* Perfume summary section */
+  .perfume-summary {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .perfume-summary h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #374151;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+  }
+  
+  .perfume-summary ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .perfume-summary li {
+    font-size: 1.1em;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+  }
+  
+  /* Order card styles */
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .order-card {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .order-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .order-header h2 {
+    font-size: 1.6em;
+    color: #1f2937;
+  }
+  
+  .order-status {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  .order-status.shipped {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .order-status.processing {
+    background-color: #f59e0b;
+    color: white;
+  }
+  
+  .order-details p {
+    font-size: 1.05em;
+    margin: 6px 0;
+  }
+  
+  /* Items list in each order */
+  .order-items {
+    margin-top: 15px;
+  }
+  
+  .order-items h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #374151;
+  }
+  
+  .order-items ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .order-items li {
+    font-size: 1em;
+    margin: 6px 0;
+    background-color: #f9fafb;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+  
